@@ -45,6 +45,13 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isMoving", isMoving);
+
+        // Just for testing the battles
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            animator.SetBool("isMoving", false);
+            OnEncountered();
+        }
     }
 
     IEnumerator Move(Vector3 targetPos)

@@ -19,8 +19,8 @@ MonoBehaviour:
   type1: 5
   type2: 8
   maxHp: 45
-  attack: 49
-  defense: 49
+  attack: 40
+  defense: 40
   spAttack: 65
   spDefense: 65
   speed: 45
@@ -31,3 +31,5 @@ MonoBehaviour:
     level: 7
   - moveBase: {fileID: 11400000, guid: 961fe281d2401b54e84bb83068db1b23, type: 2}
     level: 10
+  - moveBase: {fileID: 11400000, guid: 433c7f0f1ba367144becc81d8d84eab6, type: 2}
+    level: 4
