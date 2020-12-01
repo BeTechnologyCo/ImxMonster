@@ -8573,6 +8573,8 @@ MonoBehaviour:
   enemyUnit: {fileID: 2061544096}
   dialogBox: {fileID: 1749914798}
   partyScreen: {fileID: 1942968646}
+  playerImage: {fileID: 1138175929}
+  trainerImage: {fileID: 1695265458}
 --- !u!1 &815949131
 GameObject:
   m_ObjectHideFlags: 0
@@ -9092,6 +9094,8 @@ RectTransform:
   - {fileID: 1135789640}
   - {fileID: 580185048}
   - {fileID: 2061544095}
+  - {fileID: 1138175928}
+  - {fileID: 1695265457}
   - {fileID: 1749914795}
   - {fileID: 386550459}
   - {fileID: 1481840052}
@@ -9314,6 +9318,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135789639}
+  m_CullTransparentMesh: 0
+--- !u!1 &1138175927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138175928}
+  - component: {fileID: 1138175930}
+  - component: {fileID: 1138175929}
+  m_Layer: 0
+  m_Name: PlayerCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1138175928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138175927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 996560168}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -197.99994, y: -65.600006}
+  m_SizeDelta: {x: 120, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1138175929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138175927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.29556784, g: 0.40277153, b: 0.764151, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1138175930
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138175927}
   m_CullTransparentMesh: 0
 --- !u!1001 &1168078310
 PrefabInstance:
@@ -9888,7 +9965,7 @@ PrefabInstance:
     - target: {fileID: 6847030953451956683, guid: bb9ff464bbfd192479fcacb64462f06a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6847030953451956683, guid: bb9ff464bbfd192479fcacb64462f06a,
         type: 3}
@@ -10274,6 +10351,79 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1630587030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1695265456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695265457}
+  - component: {fileID: 1695265459}
+  - component: {fileID: 1695265458}
+  m_Layer: 0
+  m_Name: TrainerCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1695265457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695265456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 996560168}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 218, y: 139}
+  m_SizeDelta: {x: 120, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1695265458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695265456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8679245, g: 0.15557139, b: 0.38459346, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1695265459
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695265456}
+  m_CullTransparentMesh: 0
 --- !u!1 &1749914794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10309,7 +10459,7 @@ RectTransform:
   - {fileID: 1785844966}
   - {fileID: 351480052}
   m_Father: {fileID: 996560168}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10483,6 +10633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a154600fac776ee4a9139fb8d6c47c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Brendan
+  sprite: {fileID: 0}
 --- !u!114 &1760948024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10530,7 +10682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pokemons:
   - _base: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
-    level: 6
+    level: 10
   - _base: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     level: 6
   - _base: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
@@ -10861,7 +11013,7 @@ RectTransform:
   - {fileID: 533760471}
   - {fileID: 1597387183}
   m_Father: {fileID: 996560168}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11159,6 +11311,7 @@ GameObject:
   - component: {fileID: 6370180163505740996}
   - component: {fileID: 6370180163505740995}
   - component: {fileID: 6370180163505740997}
+  - component: {fileID: 6370180163505740998}
   m_Layer: 10
   m_Name: Trainer
   m_TagString: Untagged
@@ -11224,11 +11377,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c3a2acbfdc5fa46838329b5dd894eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Cool Trainer
+  sprite: {fileID: 0}
   dialog:
     lines:
     - My pokemons are strong. Let me show you.
   exclamation: {fileID: 6370180163439472521}
   fov: {fileID: 6370180163192057866}
+--- !u!114 &6370180163505740998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370180163505740994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb82ecaf66894a34c8a8e8af7aa94309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemons:
+  - _base: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
+    level: 4
+  - _base: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
+    level: 5
 --- !u!4 &6370180163505741003
 Transform:
   m_ObjectHideFlags: 0
@@ -11393,7 +11565,7 @@ PrefabInstance:
     - target: {fileID: 6847030953451956683, guid: bb9ff464bbfd192479fcacb64462f06a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6847030953451956683, guid: bb9ff464bbfd192479fcacb64462f06a,
         type: 3}
