@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Tackle
   description: "\t"
   type: 1
-  power: 40
+  power: 80
   accuracy: 100
   alwaysHits: 0
   pp: 20
