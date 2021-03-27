@@ -8,11 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] string name;
     [SerializeField] Sprite sprite;
 
-    const float offsetY = 0.3f;
-
-    public event Action OnEncountered;
-    public event Action<Collider2D> OnEnterTrainersView;
-
     private Vector2 input;
 
     private Character character;
@@ -45,8 +40,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        CheckForEncounters();
-        CheckIfInTrainersView();
+        var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY), 0.2f, GameLayers.i.TriggerableLayers);
+
+        foreach (var collider in colliders)
+        {
+            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            if (triggerable != null)
+            {
+                character.Animator.IsMoving = false;
+                triggerable.OnPlayerTriggered(this);
+                break;
+            }
+        }
     }
 
     void Interact()
@@ -63,28 +68,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CheckForEncounters()
-    {
-        if (Physics2D.OverlapCircle(transform.position - new Vector3(0, offsetY), 0.2f, GameLayers.i.GrassLayer) != null)
-        {
-            if (UnityEngine.Random.Range(1, 101) <= 10)
-            {
-                character.Animator.IsMoving = false;
-                OnEncountered();
-            }
-        }
-    }
-
-    private void CheckIfInTrainersView()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position - new Vector3(0, offsetY), 0.2f, GameLayers.i.FovLayer);
-        if (collider != null)
-        {
-            character.Animator.IsMoving = false;
-            OnEnterTrainersView?.Invoke(collider);
-        }
-    }
-
     public string Name {
         get => name;
     }
@@ -92,4 +75,6 @@ public class PlayerController : MonoBehaviour
     public Sprite Sprite {
         get => sprite;
     }
+
+    public Character Character => character;
 }
