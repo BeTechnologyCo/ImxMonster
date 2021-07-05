@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum InventoryUIState { ItemSelection, PartySelection, Busy }
+
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject itemList;
@@ -15,7 +17,10 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
 
+    [SerializeField] PartyScreen partyScreen;
+
     int selectedItem = 0;
+    InventoryUIState state;
 
     const int itemsInViewport = 8;
 
@@ -31,6 +36,8 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         UpdateItemList();
+
+        inventory.OnUpdated += UpdateItemList;
     }
 
     void UpdateItemList()
@@ -53,21 +60,56 @@ public class InventoryUI : MonoBehaviour
 
     public void HandleUpdate(Action onBack)
     {
-        int prevSelection = selectedItem;
+        if (state == InventoryUIState.ItemSelection)
+        {
+            int prevSelection = selectedItem;
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-            ++selectedItem;
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-            --selectedItem;
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+                ++selectedItem;
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
+                --selectedItem;
 
-        selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
+            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
 
-        if (prevSelection != selectedItem)
-            UpdateItemSelection();
+            if (prevSelection != selectedItem)
+                UpdateItemSelection();
 
-        if (Input.GetKeyDown(KeyCode.X))
-            onBack?.Invoke();
+            if (Input.GetKeyDown(KeyCode.Z))
+                OpenPartyScreen();
+            else if (Input.GetKeyDown(KeyCode.X))
+                onBack?.Invoke();
+        }
+        else if (state == InventoryUIState.PartySelection)
+        {
+            Action onSelected = () =>
+            {
+                StartCoroutine(UseItem());
+            };
 
+            Action onBackPartyScreen = () =>
+            {
+                ClosePartyScreen();
+            };
+
+            partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
+        }
+    }
+
+    IEnumerator UseItem()
+    {
+        state = InventoryUIState.Busy;
+
+        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
+        if (usedItem != null)
+        {
+            yield return DialogManager.Instance.ShowDialogText($"The player used {usedItem.Name}");
+        }
+        else
+        {
+            yield return DialogManager.Instance.ShowDialogText($"It won't have any affect!");
+        }
+
+        ClosePartyScreen();
     }
 
     void UpdateItemSelection()
@@ -99,5 +141,17 @@ public class InventoryUI : MonoBehaviour
 
         bool showDownArrow = selectedItem + itemsInViewport / 2 < slotUIList.Count;
         downArrow.gameObject.SetActive(showDownArrow);
+    }
+
+    void OpenPartyScreen()
+    {
+        state = InventoryUIState.PartySelection;
+        partyScreen.gameObject.SetActive(true);
+    }
+
+    void ClosePartyScreen()
+    {
+        state = InventoryUIState.ItemSelection;
+        partyScreen.gameObject.SetActive(false);
     }
 }
