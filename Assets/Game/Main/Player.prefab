@@ -259,6 +259,14 @@ MonoBehaviour:
     count: 3
   - item: {fileID: 11400000, guid: 52ce437c0e4dfaf43b0910a3d1ae228a, type: 2}
     count: 1
+  - item: {fileID: 11400000, guid: aea454fcd2940d94b87c4edbee758f0b, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: 9a9920e9792146b4bb16d42843213d72, type: 2}
+    count: 3
+  - item: {fileID: 11400000, guid: ef42c71012485474aafd9c088b040f95, type: 2}
+    count: 2
+  - item: {fileID: 11400000, guid: c0acd9629a31d8f4db07e2c1fbb9af50, type: 2}
+    count: 1
 --- !u!1 &6105532442381884576
 GameObject:
   m_ObjectHideFlags: 0
