@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145df27b980b3b145a5fe575f28dcbba, type: 3}
   m_Name: MaxRevive
   m_EditorClassIdentifier: 
-  name: Max Revice
+  name: Max Revive
   description: Revives a fainted pokemon and fully restores it's HP
   icon: {fileID: -137334465160226636, guid: 9aac8651bfc3636448b7b409b1f4d054, type: 3}
   hpAmount: 0

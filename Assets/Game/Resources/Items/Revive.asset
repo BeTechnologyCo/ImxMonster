@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145df27b980b3b145a5fe575f28dcbba, type: 3}
   m_Name: Revive
   m_EditorClassIdentifier: 
-  name: Revice
+  name: Revive
   description: Revives a fainted pokemon
   icon: {fileID: -137334465160226636, guid: 9aac8651bfc3636448b7b409b1f4d054, type: 3}
   hpAmount: 20
@@ -21,5 +21,5 @@ MonoBehaviour:
   restoreMaxPP: 0
   status: 0
   recoverAllStatus: 0
-  revive: 0
+  revive: 1
   maxRevive: 0
