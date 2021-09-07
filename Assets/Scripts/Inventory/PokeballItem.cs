@@ -15,5 +15,7 @@ public class PokeballItem : ItemBase
         return false;
     }
 
+    public override bool CanUseOutsideBattle => false;
+
     public float CatchRateModifier => catchRateModfier;
 }
