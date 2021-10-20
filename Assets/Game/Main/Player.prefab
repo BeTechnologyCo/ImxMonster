@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6105532441140382695}
   - component: {fileID: 5053530734706446812}
   - component: {fileID: 6679578988618885736}
+  - component: {fileID: 7422746948658217327}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -217,7 +218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7597083, y: 1.172708}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &5053530734706446812
 MonoBehaviour:
@@ -259,14 +260,10 @@ MonoBehaviour:
     count: 3
   - item: {fileID: 11400000, guid: 52ce437c0e4dfaf43b0910a3d1ae228a, type: 2}
     count: 1
-  - item: {fileID: 11400000, guid: aea454fcd2940d94b87c4edbee758f0b, type: 2}
-    count: 3
   - item: {fileID: 11400000, guid: 9a9920e9792146b4bb16d42843213d72, type: 2}
     count: 3
   - item: {fileID: 11400000, guid: ef42c71012485474aafd9c088b040f95, type: 2}
     count: 2
-  - item: {fileID: 11400000, guid: c0acd9629a31d8f4db07e2c1fbb9af50, type: 2}
-    count: 1
   pokeballSlots:
   - item: {fileID: 11400000, guid: 0742f4349008893408415638bf9f7c86, type: 2}
     count: 5
@@ -277,8 +274,18 @@ MonoBehaviour:
     count: 2
   - item: {fileID: 11400000, guid: a2bf4cbea40b9cf4391b2f6a20b2e72d, type: 2}
     count: 2
-  - item: {fileID: 11400000, guid: 15b1ef8b5aee0744b9261d4e2cdb8bb4, type: 2}
-    count: 1
+--- !u!114 &7422746948658217327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105532441140382696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b89c86a4f9fe6c4e8e41dab4e96ad3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6105532442381884576
 GameObject:
   m_ObjectHideFlags: 0

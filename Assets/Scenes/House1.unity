@@ -2644,6 +2644,127 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1259198098
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2224387269947086127, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: uniqueId
+      value: 8b02b15e-cea8-4475-b088-280c8791b382
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318800, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318809, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Now you can use your Fordin to battle wild pokemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307941782266318812, guid: b018929b598059b4094cde9873294efc,
+        type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 11400000, guid: 43796fb2316f2b74f8885caa402011c5,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 6782546998839390800, guid: b018929b598059b4094cde9873294efc, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b018929b598059b4094cde9873294efc, type: 3}
+--- !u!1 &1259198099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8307941782266318809, guid: b018929b598059b4094cde9873294efc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1259198098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1259198100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259198099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd45c642e5ed204eac570891ec186ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonToGive:
+    _base: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
+    level: 5
+  dialog:
+    lines:
+    - It's not safe to go out there without a pokemon
+    - You can have this pokemon
 --- !u!1001 &1363953223
 PrefabInstance:
   m_ObjectHideFlags: 0
