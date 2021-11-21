@@ -51,6 +51,20 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+    public IEnumerator CheckForEvolutions()
+    {
+        foreach (var pokemon in pokemons)
+        {
+            var evoution = pokemon.CheckForEvolution();
+            if (evoution != null)
+            {
+                yield return EvolutionManager.i.Evolve(pokemon, evoution);
+            }
+        }
+
+        OnUpdated?.Invoke();
+    }
+
     public static PokemonParty GetPlayerParty()
     {
         return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();

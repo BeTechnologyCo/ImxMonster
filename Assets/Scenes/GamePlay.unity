@@ -3327,6 +3327,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8780612638840706220, guid: 76a39e2603d68a549b34befa53e7129e,
+        type: 3}
+      propertyPath: slots.Array.data[3].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a9cb4d6c12c2914cb63590e668fb10c,
+        type: 2}
     - target: {fileID: 8945394071879058650, guid: 76a39e2603d68a549b34befa53e7129e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3517,6 +3523,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ea6e5b17e5e5f41abb67123125810f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1500132256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6991679275857091421, guid: 76a39e2603d68a549b34befa53e7129e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1500132253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1500132257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5827003585563514784, guid: 76a39e2603d68a549b34befa53e7129e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1500132253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1500132258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500132254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f92e784ead42c4993b5fd3e4517b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolutionUI: {fileID: 1500132257}
+  pokemonImage: {fileID: 1500132256}
 --- !u!1 &1843013631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1133004729654675481, guid: 5f6b707dee1768e47874d650cd2dceb0,
