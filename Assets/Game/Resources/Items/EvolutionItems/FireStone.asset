@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Fire Stone
   description: Used to evolve certain fire type pokemon
   icon: {fileID: 6465271316976419069, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  price: 2000
+  isSellable: 1

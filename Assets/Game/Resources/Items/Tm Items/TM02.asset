@@ -15,5 +15,7 @@ MonoBehaviour:
   name: TM02
   description: Can teach Super Sonic to a Pokemon
   icon: {fileID: 6639657697291588988, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  price: 1000
+  isSellable: 1
   move: {fileID: 11400000, guid: 2224ebec495d98c4da6910eb0755a107, type: 2}
   isHM: 0

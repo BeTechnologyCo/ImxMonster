@@ -4062,7 +4062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - It's not safe to go out there without a Pokemon
+    - I should go meet the professor first
 --- !u!1 &395399311
 GameObject:
   m_ObjectHideFlags: 0

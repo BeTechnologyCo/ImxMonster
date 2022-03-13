@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Revive
   description: Revives a fainted pokemon
   icon: {fileID: -137334465160226636, guid: 9aac8651bfc3636448b7b409b1f4d054, type: 3}
+  price: 500
+  isSellable: 1
   hpAmount: 20
   restoreMaxHP: 0
   ppAmount: 0

@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Greatball
   description: A ball with higher catch rate than Pokeball
   icon: {fileID: 21300000, guid: f31f8ab281be1614e828fc17c4836c39, type: 3}
+  price: 200
+  isSellable: 1
   catchRateModfier: 1.5
