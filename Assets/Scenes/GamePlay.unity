@@ -308,6 +308,11 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1428468558}
+    - target: {fileID: 1133004729654675478, guid: 5f6b707dee1768e47874d650cd2dceb0,
+        type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: bb6ec5a931eda6e418dd3c3b1ef8fdf1, type: 3}
     - target: {fileID: 1133004729654675480, guid: 5f6b707dee1768e47874d650cd2dceb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -595,6 +600,11 @@ PrefabInstance:
       propertyPath: connectedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 1307835742}
+    - target: {fileID: 1133004729654675478, guid: 5f6b707dee1768e47874d650cd2dceb0,
+        type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: f62c90e016a779a4887641760e6f4c5b, type: 3}
     - target: {fileID: 1133004729654675480, guid: 5f6b707dee1768e47874d650cd2dceb0,
         type: 3}
       propertyPath: m_LocalPosition.x
