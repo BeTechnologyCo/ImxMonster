@@ -146,7 +146,9 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
     levelRange: {x: 3, y: 5}
     chancePercentage: 30
+  wildPokemonsInWater: []
   totalChance: 100
+  totalChanceWater: -1
 --- !u!1 &45088998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1133004729654675481, guid: 5f6b707dee1768e47874d650cd2dceb0,
@@ -169,7 +171,9 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     levelRange: {x: 2, y: 4}
     chancePercentage: 100
+  wildPokemonsInWater: []
   totalChance: 100
+  totalChanceWater: -1
 --- !u!114 &1046385017 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1133004729654675478, guid: 5f6b707dee1768e47874d650cd2dceb0,
@@ -492,16 +496,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7228328906895982221, guid: 76a39e2603d68a549b34befa53e7129e,
-        type: 3}
-      propertyPath: m_Horizontal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7228328906895982221, guid: 76a39e2603d68a549b34befa53e7129e,
-        type: 3}
-      propertyPath: m_MovementType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8201781111105075196, guid: 76a39e2603d68a549b34befa53e7129e,
         type: 3}
       propertyPath: m_Name
@@ -562,22 +556,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8780612638840706220, guid: 76a39e2603d68a549b34befa53e7129e,
-        type: 3}
-      propertyPath: tmSlots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8780612638840706220, guid: 76a39e2603d68a549b34befa53e7129e,
-        type: 3}
-      propertyPath: tmSlots.Array.data[2].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 15b1ef8b5aee0744b9261d4e2cdb8bb4,
-        type: 2}
-    - target: {fileID: 8780612638840706220, guid: 76a39e2603d68a549b34befa53e7129e,
-        type: 3}
-      propertyPath: tmSlots.Array.data[2].count
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a39e2603d68a549b34befa53e7129e, type: 3}
 --- !u!1 &1843013631 stripped
@@ -602,7 +580,12 @@ MonoBehaviour:
   - pokemon: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     levelRange: {x: 2, y: 4}
     chancePercentage: 100
+  wildPokemonsInWater:
+  - pokemon: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 100
   totalChance: 100
+  totalChanceWater: 100
 --- !u!1001 &1133004728879880559
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -160,6 +160,11 @@ MonoBehaviour:
   - {fileID: 2690600881683387669, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
   - {fileID: 6634202828824015816, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
   - {fileID: -5008138227279614530, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  surfSprites:
+  - {fileID: -4465137455631916842, guid: ec976926dbc88f84080a1b1cfb3a3bfb, type: 3}
+  - {fileID: 548946438817077065, guid: ec976926dbc88f84080a1b1cfb3a3bfb, type: 3}
+  - {fileID: 4472088847651303106, guid: ec976926dbc88f84080a1b1cfb3a3bfb, type: 3}
+  - {fileID: 6356773947664160301, guid: ec976926dbc88f84080a1b1cfb3a3bfb, type: 3}
   defaultDirection: 1
 --- !u!114 &6105532441140382694
 MonoBehaviour:

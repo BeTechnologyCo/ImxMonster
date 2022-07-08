@@ -10,14 +10,13 @@ public class MapAreaEditor : Editor
     {
         base.OnInspectorGUI();
 
-        int totalChance = serializedObject.FindProperty("totalChance").intValue;
+        int totalChanceGrass = serializedObject.FindProperty("totalChance").intValue;
+        int totalChanceWater = serializedObject.FindProperty("totalChanceWater").intValue;
 
-        var style = new GUIStyle();
-        style.fontStyle = FontStyle.Bold;
+        if (totalChanceGrass != 100 && totalChanceGrass != -1)
+            EditorGUILayout.HelpBox("The total chance percentage of pokemon in grass is not 100", MessageType.Error);
 
-        GUILayout.Label($"Total Chance = {totalChance}", style);
-
-        if (totalChance != 100)
-            EditorGUILayout.HelpBox("The total chance percentage is not 100", MessageType.Error);
+        if (totalChanceWater != 100 && totalChanceWater != -1)
+            EditorGUILayout.HelpBox("The total chance percentage of pokemon in water is not 100", MessageType.Error);
     }
 }
