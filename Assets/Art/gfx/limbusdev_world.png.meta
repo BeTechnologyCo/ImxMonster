@@ -662,6 +662,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -671,8 +673,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -693,9 +695,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -5208,6 +5213,220 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      limbusdev_world_137: 5831260157649555821
+      limbusdev_world_20: -7614062922218189038
+      limbusdev_world_166: 6992856605237422864
+      limbusdev_world_23: 779982678911985193
+      limbusdev_world_6: -1262522169486152667
+      limbusdev_world_9: 6744308175832148788
+      limbusdev_world_84: -6901137879356838046
+      limbusdev_world_5: 304389532814855185
+      limbusdev_world_171: 7084599867736756501
+      limbusdev_world_97: -6294221915395401561
+      limbusdev_world_209: -5751380907741667462
+      limbusdev_world_22: 4939299836429926979
+      limbusdev_world_41: -2939060595774552377
+      limbusdev_world_47: 4372734847504033558
+      limbusdev_world_170: -6951810166879814463
+      limbusdev_world_18: -6423378824601155584
+      limbusdev_world_89: 2042683449357857552
+      limbusdev_world_197: 6431712664093168075
+      limbusdev_world_153: 597456931072813162
+      limbusdev_world_88: 756945033148152199
+      limbusdev_world_34: -2052661042485596546
+      limbusdev_world_173: -2807583839044415444
+      limbusdev_world_90: 2139242203676298613
+      limbusdev_world_139: -1444427580304310884
+      limbusdev_world_67: 288882686782573347
+      limbusdev_world_65: -5995128700482244898
+      limbusdev_world_49: -4281204361286119937
+      limbusdev_world_205: 5595223268298255408
+      limbusdev_world_68: -7007063980041405843
+      limbusdev_world_30: -2167519367394415370
+      limbusdev_world_165: -8003668758568629051
+      limbusdev_world_130: 8918353110950075491
+      limbusdev_world_204: -2449706579874090694
+      limbusdev_world_152: -7218236956734803326
+      limbusdev_world_37: -7520747543159215661
+      limbusdev_world_128: 4380008273855898541
+      limbusdev_world_54: 2106202435598484961
+      limbusdev_world_117: 3107182145875638809
+      limbusdev_world_177: -4679816800187161312
+      limbusdev_world_3: 737774354104797664
+      limbusdev_world_140: -4801151058665916550
+      limbusdev_world_116: 1290893688356710644
+      limbusdev_world_185: 4455964829698743654
+      limbusdev_world_24: -5514401594588417146
+      limbusdev_world_74: 6351703680328632275
+      limbusdev_world_1: -2877173269938303289
+      limbusdev_world_76: 5065657027387574469
+      limbusdev_world_194: 577860206085912226
+      limbusdev_world_113: -5224166369144037526
+      limbusdev_world_91: 5164124451818631681
+      limbusdev_world_17: -4597634335677999160
+      limbusdev_world_133: 5912823129266575030
+      limbusdev_world_2: -8822396017728945052
+      limbusdev_world_73: 489405638347982180
+      limbusdev_world_103: 5028122415035814006
+      limbusdev_world_28: 4325369323481135839
+      limbusdev_world_131: -1103097376293458118
+      limbusdev_world_56: 794193083606471600
+      limbusdev_world_176: -4343451767311904493
+      limbusdev_world_70: 1507870838067010754
+      limbusdev_world_211: 2244047425237148866
+      limbusdev_world_95: -2580342042083948131
+      limbusdev_world_112: 6704354076527418922
+      limbusdev_world_145: 919822391598168459
+      limbusdev_world_175: -5033231900632932697
+      limbusdev_world_51: -8116896219237704387
+      limbusdev_world_8: 7394551017937131411
+      limbusdev_world_125: -8489024152709274083
+      limbusdev_world_38: 59339386124859485
+      limbusdev_world_179: 2231406991999632455
+      limbusdev_world_59: -8090650337736210323
+      limbusdev_world_57: 7303686552455541106
+      limbusdev_world_160: -4568715590279312251
+      limbusdev_world_26: -6582321221273379022
+      limbusdev_world_72: 8193614195000332167
+      limbusdev_world_124: 6070915056015733249
+      limbusdev_world_202: 3347486225776696480
+      limbusdev_world_14: 960759294222211712
+      limbusdev_world_16: 6955350571786242998
+      limbusdev_world_144: 4092753798198184334
+      limbusdev_world_93: 6300809969114158798
+      limbusdev_world_60: -6514638619200528611
+      limbusdev_world_114: -2788808869319519928
+      limbusdev_world_39: 9213250942441459050
+      limbusdev_world_129: 4941468330749675245
+      limbusdev_world_64: -4091076888579120132
+      limbusdev_world_33: -7185616935398493601
+      limbusdev_world_0: 5666300395095087125
+      limbusdev_world_87: -5201197606188638911
+      limbusdev_world_132: -4929556663999569929
+      limbusdev_world_69: -7573479428114122238
+      limbusdev_world_50: 4883749391807126656
+      limbusdev_world_162: 3799711793388945782
+      limbusdev_world_63: 1431447932151327283
+      limbusdev_world_21: -2798885771688996345
+      limbusdev_world_46: 6532673098499805798
+      limbusdev_world_106: -2953706693866065269
+      limbusdev_world_148: 4469714084581890416
+      limbusdev_world_78: -2030844849326394610
+      limbusdev_world_143: 5156568996761475429
+      limbusdev_world_167: 3492403799200475281
+      limbusdev_world_126: -2941101797972950254
+      limbusdev_world_35: -3320502056027061128
+      limbusdev_world_156: -7744242081907931872
+      limbusdev_world_161: 2058501939091314338
+      limbusdev_world_40: -4410755559784035079
+      limbusdev_world_36: -4358733126091841301
+      limbusdev_world_191: -3957916549494920255
+      limbusdev_world_15: 8869182916865848689
+      limbusdev_world_195: 3066267314644332276
+      limbusdev_world_42: -3157637091024916077
+      limbusdev_world_66: 5646261368944229696
+      limbusdev_world_190: 6068018595055550170
+      limbusdev_world_178: -251444044344007409
+      limbusdev_world_157: 4927109118663469204
+      limbusdev_world_92: -6340664994955070400
+      limbusdev_world_201: -7693530846047488770
+      limbusdev_world_80: -4717160267380238471
+      limbusdev_world_120: -5941462814310966597
+      limbusdev_world_94: -3614542898691258432
+      limbusdev_world_12: 144466327550434688
+      limbusdev_world_199: -4849945513964029798
+      limbusdev_world_150: 783922691940574561
+      limbusdev_world_52: 69132335649588360
+      limbusdev_world_79: 652274354268724120
+      limbusdev_world_62: -4018098968771804640
+      limbusdev_world_188: 1152850674772393889
+      limbusdev_world_154: -7176700418866256288
+      limbusdev_world_27: -2164363338911434482
+      limbusdev_world_142: -2243868639687867138
+      limbusdev_world_198: 8131742413081668101
+      limbusdev_world_174: 5263836017727065317
+      limbusdev_world_155: 7957488053133156713
+      limbusdev_world_48: 7178003105206256285
+      limbusdev_world_86: 258496301087531247
+      limbusdev_world_10: -3450132041670228864
+      limbusdev_world_101: -2818129475481342591
+      limbusdev_world_29: -224399855882449891
+      limbusdev_world_210: 6368381971404641928
+      limbusdev_world_43: -6893912437332226790
+      limbusdev_world_134: -6903340902881809971
+      limbusdev_world_110: -8204227587138147185
+      limbusdev_world_104: 1155811713593016136
+      limbusdev_world_151: 3009199228981409096
+      limbusdev_world_83: 5275264469712664557
+      limbusdev_world_168: 3850127586347709658
+      limbusdev_world_98: 2565615953050664565
+      limbusdev_world_99: -5703107572648153538
+      limbusdev_world_141: -7213537832341669870
+      limbusdev_world_115: -2925120377694944102
+      limbusdev_world_146: -5541704043702510327
+      limbusdev_world_192: -8233078376012528769
+      limbusdev_world_121: -5746528475472218648
+      limbusdev_world_149: 5630000736755187234
+      limbusdev_world_159: 3782981086132138387
+      limbusdev_world_189: 6277412151583834227
+      limbusdev_world_61: 1846989865201999
+      limbusdev_world_183: 5884899589941516047
+      limbusdev_world_186: 8320682288236397509
+      limbusdev_world_109: -2702881060919159279
+      limbusdev_world_119: -1432840066359238947
+      limbusdev_world_136: 6199718571300376664
+      limbusdev_world_138: 7458439487716261252
+      limbusdev_world_158: 2473324517344486914
+      limbusdev_world_196: -7809048122763097363
+      limbusdev_world_44: -3462594080337290120
+      limbusdev_world_122: 4124255021031955915
+      limbusdev_world_200: 7310922782958883829
+      limbusdev_world_100: -4324128348786336628
+      limbusdev_world_45: -5009829311109658091
+      limbusdev_world_77: 8815326684968462481
+      limbusdev_world_81: 4038616360069235613
+      limbusdev_world_55: -9041314933137207826
+      limbusdev_world_102: -6715115457806228838
+      limbusdev_world_193: 4433374435664267949
+      limbusdev_world_82: -8903216417908302035
+      limbusdev_world_181: -7301976957438543283
+      limbusdev_world_53: 3626022230026410111
+      limbusdev_world_206: 4193571519638013676
+      limbusdev_world_111: 4242614559776786672
+      limbusdev_world_180: 6252850065532318037
+      limbusdev_world_108: 6408786334948334183
+      limbusdev_world_135: 5866918345684443066
+      limbusdev_world_169: -2357813701717208339
+      limbusdev_world_207: 8398547505222404367
+      limbusdev_world_147: 8088417366167039235
+      limbusdev_world_11: 1279147883499780554
+      limbusdev_world_71: -3598008535637277650
+      limbusdev_world_184: 235553297039594034
+      limbusdev_world_127: 7587323304505042046
+      limbusdev_world_105: 1462801236816391304
+      limbusdev_world_123: -1418009088639408247
+      limbusdev_world_208: -2700703353702475815
+      limbusdev_world_96: 1718811889973141851
+      limbusdev_world_163: 2402863326262184930
+      limbusdev_world_4: -964974588838367994
+      limbusdev_world_118: 2536114088166255246
+      limbusdev_world_172: 733621054062145429
+      limbusdev_world_19: 5712151168232661578
+      limbusdev_world_85: -3874252484133715215
+      limbusdev_world_182: 7189332404594327534
+      limbusdev_world_203: -1299031080236941434
+      limbusdev_world_31: 1756902320663005710
+      limbusdev_world_13: 511290284263648465
+      limbusdev_world_107: 2392403133505367518
+      limbusdev_world_212: 8300295325193758352
+      limbusdev_world_25: -3844055031638092044
+      limbusdev_world_58: -8064330014978977947
+      limbusdev_world_7: -6978313388598099880
+      limbusdev_world_32: -7424838377806294508
+      limbusdev_world_75: 7255059472004635045
+      limbusdev_world_164: 5016065116881454054
+      limbusdev_world_187: -7613962660060349510
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

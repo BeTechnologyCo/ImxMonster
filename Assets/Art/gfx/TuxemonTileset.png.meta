@@ -317,6 +317,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -326,8 +328,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -348,9 +350,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -2448,6 +2453,105 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TuxemonTileset_92: -9107355779186094197
+      TuxemonTileset_27: 8328002904683539716
+      TuxemonTileset_25: -8859918203637237233
+      TuxemonTileset_44: 2774383133817754734
+      TuxemonTileset_34: -3657158902805239978
+      TuxemonTileset_62: 136793625529625338
+      TuxemonTileset_73: -5808136399942390341
+      TuxemonTileset_97: -6816021805245398585
+      TuxemonTileset_20: -5127607242546305806
+      TuxemonTileset_52: -4365085485716824579
+      TuxemonTileset_53: -2812779195028129439
+      TuxemonTileset_46: 6991517654922148981
+      TuxemonTileset_95: 6858508676323150509
+      TuxemonTileset_22: 1710332369665517308
+      TuxemonTileset_33: -1034124585739764187
+      TuxemonTileset_93: 5696661588315619592
+      TuxemonTileset_3: -1454678017233635418
+      TuxemonTileset_78: -1813982911473213649
+      TuxemonTileset_47: 5912755666545851479
+      TuxemonTileset_6: -2354230129288015713
+      TuxemonTileset_80: -2208225827353629002
+      TuxemonTileset_40: 3457331551769578740
+      TuxemonTileset_4: -4203900173639110547
+      TuxemonTileset_21: -6004134724410668573
+      TuxemonTileset_65: 4293532685929897631
+      TuxemonTileset_72: -4022435062480997525
+      TuxemonTileset_43: -4062926784226541743
+      TuxemonTileset_49: -232837154127013262
+      TuxemonTileset_71: 3375549309885069034
+      TuxemonTileset_59: 8765249395443990743
+      TuxemonTileset_8: 7682733975416228941
+      TuxemonTileset_14: 140651873477598359
+      TuxemonTileset_60: 5470348062556923420
+      TuxemonTileset_63: 7777568811947046785
+      TuxemonTileset_54: -3291391505704215488
+      TuxemonTileset_61: 8611710624489393438
+      TuxemonTileset_56: 8854928628591286982
+      TuxemonTileset_37: 2428497789453289744
+      TuxemonTileset_51: -6928634747526721619
+      TuxemonTileset_69: -2766532970828105357
+      TuxemonTileset_96: -950470435840035474
+      TuxemonTileset_9: 2501248127992362733
+      TuxemonTileset_94: 6779654843250174379
+      TuxemonTileset_15: 9036830988757334846
+      TuxemonTileset_24: 2605881038816023190
+      TuxemonTileset_23: -2500931454704668236
+      TuxemonTileset_18: -5157607426054353667
+      TuxemonTileset_90: 402962210536133129
+      TuxemonTileset_83: -5430022715641503414
+      TuxemonTileset_12: -6895011447393379234
+      TuxemonTileset_84: 6241875127114830729
+      TuxemonTileset_16: -3185177677560273765
+      TuxemonTileset_26: 8187520881209635214
+      TuxemonTileset_74: 3112497783759416055
+      TuxemonTileset_85: 5938515418034694134
+      TuxemonTileset_29: 3259174256982522616
+      TuxemonTileset_67: -6584210633567301542
+      TuxemonTileset_89: -5268131355877456372
+      TuxemonTileset_1: 7607632856239988047
+      TuxemonTileset_2: 2548696087377268956
+      TuxemonTileset_19: 4483000223821441750
+      TuxemonTileset_75: 998802831170746936
+      TuxemonTileset_17: -3923326932714590726
+      TuxemonTileset_81: -7858368137760625926
+      TuxemonTileset_10: -9163432167906964458
+      TuxemonTileset_58: -5263920446610939098
+      TuxemonTileset_48: -6571996321924722936
+      TuxemonTileset_31: 1937621086927203638
+      TuxemonTileset_36: 2829367693030950979
+      TuxemonTileset_35: 408936484223690818
+      TuxemonTileset_30: -1407734222172811564
+      TuxemonTileset_38: -25043651227913295
+      TuxemonTileset_68: 5252694012331223186
+      TuxemonTileset_64: -4919714115433529286
+      TuxemonTileset_77: -8428074572614310942
+      TuxemonTileset_41: 4669504604339428682
+      TuxemonTileset_88: 6847800443940633473
+      TuxemonTileset_66: -5122590830784491960
+      TuxemonTileset_70: 7767982875099746198
+      TuxemonTileset_45: -7806775663444735784
+      TuxemonTileset_87: -8705507115844553117
+      TuxemonTileset_42: 7084172178065558196
+      TuxemonTileset_82: 7287742064927551864
+      TuxemonTileset_11: 7137445805475202191
+      TuxemonTileset_7: 8820265721447892669
+      TuxemonTileset_79: 3509404485777946639
+      TuxemonTileset_50: 7002021953563289172
+      TuxemonTileset_13: 3997436416280004899
+      TuxemonTileset_91: 3880392565820986820
+      TuxemonTileset_55: 4795204021053436469
+      TuxemonTileset_28: -6764124297560850022
+      TuxemonTileset_57: -2405617243675038886
+      TuxemonTileset_39: -6272122080491768990
+      TuxemonTileset_5: 920985985120191827
+      TuxemonTileset_0: -872002371628811935
+      TuxemonTileset_86: -3936510344155738207
+      TuxemonTileset_32: -8604152463415548008
+      TuxemonTileset_76: -5967997300463581866
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
