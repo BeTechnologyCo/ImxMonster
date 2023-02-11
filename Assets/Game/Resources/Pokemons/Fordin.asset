@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Fordin
   description: 
   frontSprite: {fileID: 21300000, guid: 74315eb8eeef6e149bb02c6596878bb0, type: 3}
-  backSprite: {fileID: 21300000, guid: 173a37795f977b94598d4bcc67652a14, type: 3}
+  backSprite: {fileID: 21300000, guid: 74315eb8eeef6e149bb02c6596878bb0, type: 3}
   type1: 5
   type2: 8
   maxHp: 45
