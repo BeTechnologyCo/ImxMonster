@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Service;
 using UnityEngine;
 
 public class PokemonParty : MonoBehaviour
@@ -20,8 +21,21 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private async  void Awake()
     {
+
+        Pokemons = new List<Pokemon>();
+        var monsters = await MonsterService.GetMonsters();
+        if (monsters.Count > 0)
+        {
+            foreach (var item in monsters)
+            {
+                var pokeDb = PokemonDB.GetObjectByName(item.Monster.Name);
+                var pokemon = new Pokemon(pokeDb, item.Level);
+                Pokemons.Add(pokemon);
+            }
+            OnUpdated?.Invoke();
+        }
         foreach (var pokemon in pokemons)
         {
             pokemon.Init();
@@ -38,10 +52,12 @@ public class PokemonParty : MonoBehaviour
         return pokemons.Where(x => x.HP > 0).FirstOrDefault();
     }
 
-    public void AddPokemon(Pokemon newPokemon)
+    public async void AddPokemon(Pokemon newPokemon)
     {
         if (pokemons.Count < 6)
         {
+            AddMonsterDto info = new AddMonsterDto() { Level = newPokemon.Level, Name = newPokemon.Base.Name };
+            await MonsterService.MintMonster(info);
             pokemons.Add(newPokemon);
             OnUpdated?.Invoke();
         }

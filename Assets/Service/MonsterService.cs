@@ -91,7 +91,7 @@ namespace Assets.Service
                 {
                     var res = await response.Content.ReadAsStringAsync();
                     var payload = JsonConvert.DeserializeObject<List<TokenDto>>(res);
-                    Debug.Log("monsters loaded");
+                    Debug.Log("monsters loaded "+ payload?.Count);
 
                     return payload;
                 }
