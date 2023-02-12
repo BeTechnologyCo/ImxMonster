@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         i = this;
         character = GetComponent<Character>();
+        name = GameContext.Instance.Name;
     }
 
     public void HandleUpdate()
