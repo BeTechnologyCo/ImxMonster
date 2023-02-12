@@ -43,6 +43,7 @@ public class Register : MonoBehaviour
                 var player = await RegisterService.CreatePlayer(txtName.text);
                 lblError.text = "Player created";
                 Debug.Log($"Player {player.Name}");
+                GameContext.Instance.Name = player.Name;
                 SceneManager.LoadScene("GamePlay");
             }
             catch (System.Exception ex)
@@ -62,6 +63,7 @@ public class Register : MonoBehaviour
         {
             var player = await RegisterService.GetPlayer();
             Debug.Log($"Player {player.Name}");
+            GameContext.Instance.Name = player.Name;
             SceneManager.LoadScene("GamePlay");
         }
         catch (System.Exception ex)

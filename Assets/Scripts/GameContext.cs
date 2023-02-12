@@ -19,6 +19,7 @@ public class GameContext
 
     public string Token { get; set; }
     public string Account { get; set; }
+    public string Name { get; set; }
 
     private GameContext()
     {
