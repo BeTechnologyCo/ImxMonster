@@ -84,4 +84,31 @@ public class RegisterService
             }
         }
     }
+
+    public static async Task<List<string>> GetUsers()
+    {
+        Debug.Log("GetPlayer");
+
+        using (var client = new HttpClient())
+        {
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GameContext.Instance.Token);
+
+            var url = $"{serviceUrl}/GetUsers";
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var res = await response.Content.ReadAsStringAsync();
+                var payload = JsonConvert.DeserializeObject<List<string>>(res);
+                Debug.Log("player loaded");
+
+                return payload;
+            }
+            else
+            {
+                throw new InvalidOperationException("Error server " + response.ReasonPhrase);
+            }
+        }
+    }
 }

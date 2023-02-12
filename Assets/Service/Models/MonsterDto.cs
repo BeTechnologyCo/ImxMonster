@@ -43,3 +43,9 @@ public class MoveDto
     public int MoveId { get; set; }
     public string Name { get; set; }
 }
+
+public class TransferMonsterDto
+{
+    public int TokenId { get; set; }
+    public string UserName { get; set; }
+}

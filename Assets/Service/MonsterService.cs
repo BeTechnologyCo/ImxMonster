@@ -9,7 +9,7 @@ using Debug = UnityEngine.Debug;
 
 namespace Assets.Service
 {
-    public class MonsterService 
+    public class MonsterService
     {
         static HttpClient client = new HttpClient();
         private static string serviceUrl = "https://localhost:7062/api/monster";
@@ -91,7 +91,39 @@ namespace Assets.Service
                 {
                     var res = await response.Content.ReadAsStringAsync();
                     var payload = JsonConvert.DeserializeObject<List<TokenDto>>(res);
-                    Debug.Log("monsters loaded "+ payload?.Count);
+                    Debug.Log("monsters loaded " + payload?.Count);
+
+                    return payload;
+                }
+                else
+                {
+                    throw new InvalidOperationException("Error server " + response.ReasonPhrase);
+                }
+            }
+        }
+
+        public static async Task<List<TokenDto>> TransferMonster(int tokenId, string playerName)
+        {
+            Debug.Log("TransferMonster");
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GameContext.Instance.Token);
+
+                var url = $"{serviceUrl}/TransferMonsters";
+
+                var monsterInfo = new TransferMonsterDto()
+                {
+                    TokenId = tokenId,
+                    UserName = playerName
+                };
+                var response = await client.PostAsJsonAsync(url,monsterInfo);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var res = await response.Content.ReadAsStringAsync();
+                    var payload = JsonConvert.DeserializeObject<List<TokenDto>>(res);
+                    Debug.Log("monsters transfered " + payload?.Count);
 
                     return payload;
                 }
