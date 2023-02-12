@@ -144,10 +144,13 @@ MonoBehaviour:
   wildPokemons:
   - pokemon: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     levelRange: {x: 2, y: 4}
-    chancePercentage: 70
+    chancePercentage: 33
   - pokemon: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
     levelRange: {x: 3, y: 5}
-    chancePercentage: 30
+    chancePercentage: 34
+  - pokemon: {fileID: 11400000, guid: e18a3abefd5e34aa6be325347d4703cc, type: 2}
+    levelRange: {x: 3, y: 5}
+    chancePercentage: 33
   wildPokemonsInWater: []
   totalChance: 100
   totalChanceWater: -1
@@ -172,7 +175,10 @@ MonoBehaviour:
   wildPokemons:
   - pokemon: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     levelRange: {x: 2, y: 4}
-    chancePercentage: 100
+    chancePercentage: 50
+  - pokemon: {fileID: 11400000, guid: dfdf329ccbee74698b8b84a290a9fdd8, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 50
   wildPokemonsInWater: []
   totalChance: 100
   totalChanceWater: -1
@@ -674,11 +680,17 @@ MonoBehaviour:
   wildPokemons:
   - pokemon: {fileID: 11400000, guid: b0f06cb1aa0571b43a653effe2b494b6, type: 2}
     levelRange: {x: 2, y: 4}
-    chancePercentage: 100
+    chancePercentage: 70
+  - pokemon: {fileID: 11400000, guid: 709a2b175750d4dcd9f7e0a51e4e7819, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 30
   wildPokemonsInWater:
   - pokemon: {fileID: 11400000, guid: 74048fb159f540645a522b709b32a4a4, type: 2}
     levelRange: {x: 2, y: 4}
-    chancePercentage: 100
+    chancePercentage: 50
+  - pokemon: {fileID: 11400000, guid: dfdf329ccbee74698b8b84a290a9fdd8, type: 2}
+    levelRange: {x: 2, y: 4}
+    chancePercentage: 50
   totalChance: 100
   totalChanceWater: 100
 --- !u!1001 &1133004728879880559

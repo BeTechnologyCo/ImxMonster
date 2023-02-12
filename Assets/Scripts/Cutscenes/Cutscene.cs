@@ -37,7 +37,12 @@ public class Cutscene : MonoBehaviour, IPlayerTriggerable
 
     public void OnPlayerTriggered(PlayerController player)
     {
-        player.Character.Animator.IsMoving = false;
-        StartCoroutine(Play());
+        var pokemons = player.Character.GetComponent<PokemonParty>().Pokemons;
+        if (pokemons == null || pokemons.Count == 0)
+        {
+            player.Character.Animator.IsMoving = false;
+
+            StartCoroutine(Play());
+        }
     }
 }
