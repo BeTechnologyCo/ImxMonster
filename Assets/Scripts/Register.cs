@@ -27,6 +27,7 @@ public class Register : MonoBehaviour
         lblError = root.Q<Label>("lblError");
         btnCreate.clicked += BtnCreate_clicked;
         btnCreate.visible = false;
+        txtName.visible = false;
 
         lblError.text = "Loading player ...";
 
@@ -69,6 +70,7 @@ public class Register : MonoBehaviour
         catch (System.Exception ex)
         {
             btnCreate.visible = true;
+            txtName.visible = true;
             Debug.LogWarning(ex.Message);
             lblError.text = "";
         }
