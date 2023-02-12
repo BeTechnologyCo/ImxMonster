@@ -32,6 +32,7 @@ public class PokemonParty : MonoBehaviour
             {
                 var pokeDb = PokemonDB.GetObjectByName(item.Monster.Name);
                 var pokemon = new Pokemon(pokeDb, item.Level);
+                pokemon.TokenId = item.TokenId;
                 Pokemons.Add(pokemon);
             }
             OnUpdated?.Invoke();

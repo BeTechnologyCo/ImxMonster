@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Service;
 using UnityEngine;
 
 [System.Serializable]
@@ -8,6 +9,8 @@ public class Pokemon
 {
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
+
+    public int TokenId { get; set; }
 
     public Pokemon(PokemonBase pBase, int pLevel)
     {
@@ -17,13 +20,17 @@ public class Pokemon
         Init();
     }
 
-    public PokemonBase Base { 
-        get {
+    public PokemonBase Base
+    {
+        get
+        {
             return _base;
         }
     }
-    public int Level { 
-        get {
+    public int Level
+    {
+        get
+        {
             return level;
         }
     }
@@ -220,24 +227,30 @@ public class Pokemon
         OnHPChanged?.Invoke();
     }
 
-    public int Attack {
+    public int Attack
+    {
         get { return GetStat(Stat.Attack); }
     }
 
-    public int Defense {
+    public int Defense
+    {
         get { return GetStat(Stat.Defense); }
     }
 
-    public int SpAttack {
+    public int SpAttack
+    {
         get { return GetStat(Stat.SpAttack); }
     }
 
-    public int SpDefense {
+    public int SpDefense
+    {
         get { return GetStat(Stat.SpDefense); }
     }
 
-    public int Speed {
-        get {
+    public int Speed
+    {
+        get
+        {
             return GetStat(Stat.Speed);
         }
     }
@@ -346,10 +359,18 @@ public class Pokemon
         VolatileStatus?.OnAfterTurn?.Invoke(this);
     }
 
-    public void OnBattleOver()
+    public async void OnBattleOver()
     {
         VolatileStatus = null;
         ResetStatBoost();
+
+        UpdateMonsterDto monsterDto = new UpdateMonsterDto()
+        {
+            TokenId = TokenId,
+            Exp = Exp,
+            Level = Level
+        };
+        await MonsterService.UpdateMonster(monsterDto);
     }
 }
 
