@@ -29,40 +29,13 @@ public class ConnectionService
 
     }
 
-    public static async Task CreateAccountAsync(string userName, string email, string password)
-    {
-
-        Debug.Log("CreateAccountAsync");
-        var response = await client.PostAsJsonAsync(serviceUrl + "/Account/Register", new { email, password });
-
-        // Ignore 409 responses, as they indicate that the account already exists.
-        if (response.StatusCode == HttpStatusCode.Conflict)
-        {
-            return;
-        }
-
-        response.EnsureSuccessStatusCode();
-        Debug.Log("Account created");
-    }
-
     public static async Task<string> GetTokenAsync(LoginVM loginInfo)
     {
         Debug.Log("GetTokenAsync");
-
-        var response = await client.PostAsJsonAsync<LoginVM>(serviceUrl + "/CreateToken", loginInfo);
-
-        if (response.IsSuccessStatusCode)
-        {
-            var res = await response.Content.ReadAsStringAsync();
-            var payload = JsonConvert.DeserializeObject<TokenResponse>(res);
-            Debug.Log("token created");
-
-            return payload.Token;
-        }
-        else
-        {
-            throw new InvalidOperationException("Error server " + response.ReasonPhrase);
-        }
+        var url = serviceUrl + "/CreateToken";
+        var response = await UnityRequestClient.Post<TokenResponse>(url, loginInfo);
+        Debug.Log("token created");
+        return response.Token;
     }
 
     public static async Task<MessageVM> RequestConnection(string account)
@@ -71,19 +44,6 @@ public class ConnectionService
 
         var url = $"{serviceUrl}/RequestConnection?account={account}";
 
-        var response = await client.GetAsync(url);
-
-        if (response.IsSuccessStatusCode)
-        {
-            var res = await response.Content.ReadAsStringAsync();
-            var payload = JsonConvert.DeserializeObject<MessageVM>(res);
-            Debug.Log("requestconnection");
-
-            return payload;
-        }
-        else
-        {
-            throw new InvalidOperationException("Error server " + response.ReasonPhrase);
-        }
+        return await UnityRequestClient.Get<MessageVM>(url);
     }
 }
