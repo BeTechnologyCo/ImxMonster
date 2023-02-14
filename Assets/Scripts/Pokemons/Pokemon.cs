@@ -370,7 +370,10 @@ public class Pokemon
             Exp = Exp,
             Level = Level
         };
-        await MonsterService.UpdateMonster(monsterDto);
+        if (TokenId > 0)
+        {
+            await MonsterService.UpdateMonster(monsterDto);
+        }
     }
 }
 

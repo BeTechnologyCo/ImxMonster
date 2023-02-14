@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using UnityEngine;
 using System.Timers;
+using UnityEngine;
 
 
 public class ConnectionService
 {
-    private static Timer aTimer;
-    static HttpClient client = new HttpClient();
     private static string serviceUrl = "https://localhost:7062/api/login";
-
 
     static ConnectionService()
     {

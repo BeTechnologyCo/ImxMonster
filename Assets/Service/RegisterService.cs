@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using UnityEngine;
-using System.Timers;
 
 
 public class RegisterService
 {
-    private static Timer aTimer;
     private static string serviceUrl = "https://localhost:7062/api/register";
 
 
@@ -33,82 +23,25 @@ public class RegisterService
     public static async Task<PlayerDto> CreatePlayer(string name)
     {
         Debug.Log("CreatePlayer");
-
-        using (var client = new HttpClient())
+        var url = serviceUrl + "/CreatePlayer";
+        var data = new PlayerName()
         {
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GameContext.Instance.Token);
-
-            var response = await client.PostAsJsonAsync<PlayerName>(serviceUrl + "/CreatePlayer", new PlayerName()
-            {
-                Name = name
-            });
-
-            if (response.IsSuccessStatusCode)
-            {
-                var res = await response.Content.ReadAsStringAsync();
-                var payload = JsonConvert.DeserializeObject<PlayerDto>(res);
-                Debug.Log("player created");
-
-                return payload;
-            }
-            else
-            {
-                throw new InvalidOperationException("Error server " + response.ReasonPhrase);
-            }
-        }
+            Name = name
+        };
+        return await UnityRequestClient.Post<PlayerDto>(url, data);
     }
 
     public static async Task<PlayerDto> GetPlayer()
     {
         Debug.Log("GetPlayer");
-
-        using (var client = new HttpClient())
-        {
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GameContext.Instance.Token);
-
-            var url = $"{serviceUrl}/GetPlayer";
-
-            var response = await client.GetAsync(url);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var res = await response.Content.ReadAsStringAsync();
-                var payload = JsonConvert.DeserializeObject<PlayerDto>(res);
-                Debug.Log("player loaded");
-
-                return payload;
-            }
-            else
-            {
-                throw new InvalidOperationException("Error server " + response.ReasonPhrase);
-            }
-        }
+        var url = serviceUrl + "/GetPlayer";
+        return await UnityRequestClient.Get<PlayerDto>(url);
     }
 
     public static async Task<List<string>> GetUsers()
     {
         Debug.Log("GetPlayer");
-
-        using (var client = new HttpClient())
-        {
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GameContext.Instance.Token);
-
-            var url = $"{serviceUrl}/GetUsers";
-
-            var response = await client.GetAsync(url);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var res = await response.Content.ReadAsStringAsync();
-                var payload = JsonConvert.DeserializeObject<List<string>>(res);
-                Debug.Log("player loaded");
-
-                return payload;
-            }
-            else
-            {
-                throw new InvalidOperationException("Error server " + response.ReasonPhrase);
-            }
-        }
+        var url = serviceUrl + "/GetUsers";
+        return await UnityRequestClient.Get<List<string>>(url);
     }
 }
