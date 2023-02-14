@@ -10,7 +10,7 @@ public class RegisterService
 
     static RegisterService()
     {
-        serviceUrl = "https://localhost:7062/api/register";
+        serviceUrl = "https://imxserver.azurewebsites.net/api/register";
 
 #if UNITY_EDITOR
         serviceUrl = "https://localhost:7062/api/register";

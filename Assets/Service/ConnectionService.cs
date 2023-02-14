@@ -10,7 +10,7 @@ public class ConnectionService
 
     static ConnectionService()
     {
-        serviceUrl = "https://localhost:7062/api/login";
+        serviceUrl = "https://imxserver.azurewebsites.net/api/login";
 
 #if UNITY_EDITOR
         serviceUrl = "https://localhost:7062/api/login";

@@ -11,7 +11,7 @@ namespace Assets.Service
 
         static MonsterService()
         {
-            serviceUrl = "https://localhost:7062/api/monster";
+            serviceUrl = "https://imxserver.azurewebsites.net/api/monster";
 
 #if UNITY_EDITOR
             serviceUrl = "https://localhost:7062/api/monster";
