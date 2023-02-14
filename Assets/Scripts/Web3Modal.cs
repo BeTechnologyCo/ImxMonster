@@ -22,7 +22,7 @@ public class Web3Modal : MonoBehaviour
     protected Button btnWC;
     protected Button btnMetamask;
     protected Button btnClose;
-
+    protected Button btnTest;
 
     void Start()
     {
@@ -32,12 +32,14 @@ public class Web3Modal : MonoBehaviour
         btnWC = root.Q<Button>("btnWeb3ModalWC");
         btnMetamask = root.Q<Button>("btnWeb3ModalMetamask");
         btnClose = root.Q<Button>("btnWeb3ModalClose");
+        btnTest = root.Q<Button>("btnWeb3Test");
         imgQrCode = root.Q<VisualElement>("imgQrCode");
         veMetamask = root.Q<VisualElement>("veMetamask");
 
         btnMetamask.clicked += BtnMetamask_clicked;
         btnWC.clicked += BtnWC_clicked;
         btnClose.clicked += BtnClose_clicked;
+        btnTest.clicked += BtnTest_clicked;
 
         btnWC.text = "Regenerate QR code";
         veMetamask.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
@@ -59,6 +61,11 @@ public class Web3Modal : MonoBehaviour
         GetUri();
 #endif
 
+    }
+
+    private void BtnTest_clicked()
+    {
+        Web3Connect.Instance.ConnectRPC("https://rpc.ankr.com/polygon_mumbai");
     }
 
     private void Instance_UriGenerated(object sender, string e)
