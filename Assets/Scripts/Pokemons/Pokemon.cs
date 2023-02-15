@@ -364,14 +364,14 @@ public class Pokemon
         VolatileStatus = null;
         ResetStatBoost();
 
-        UpdateMonsterDto monsterDto = new UpdateMonsterDto()
-        {
-            TokenId = TokenId,
-            Exp = Exp,
-            Level = Level
-        };
         if (TokenId > 0)
         {
+            UpdateMonsterDto monsterDto = new UpdateMonsterDto()
+            {
+                TokenId = TokenId,
+                Exp = Exp,
+                Level = Level
+            };
             await MonsterService.UpdateMonster(monsterDto);
         }
     }
